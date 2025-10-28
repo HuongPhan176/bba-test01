@@ -1,0 +1,17 @@
+function findPairsDivisibleBy17() {
+    const numbers = [];
+    let count = 0;
+    for (let i = 1; i <= 100 ; i++) {
+        if (i % 17 === 0) {
+            numbers.push(i);
+        }
+    };
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = i+1; j< numbers.length; j++) {
+            count += 1;
+            console.log(`(${numbers[i]}, ${numbers[j]}) is a pair of numbers that is divisible by 17`);
+        }
+    };
+    console.log(`Total ${count} pairs of numbers divisible by 17`)
+}
+findPairsDivisibleBy17();
